@@ -1,0 +1,41 @@
+:root {
+  --main-color: #02d4ae;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  color: #1d1d1d;
+  background-color: white;
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  /* padding: 0 50px; */
+}
+
+@media screen and (max-width: 950px) {
+  /* taisykles kurios galioja nuo 0 iki 950px */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
