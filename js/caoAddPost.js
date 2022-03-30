@@ -22,6 +22,7 @@ async function createPost(newPostData) {
     body: JSON.stringify(newPostData),
   });
   const atsInJs = await resp.json();
+  console.log("atsInJs===", atsInJs);
   if (atsInJs.success === false) {
     // turim klaidu masyva atsInJs.error
     handleErrors(atsInJs.error);
@@ -37,5 +38,5 @@ function handleErrors(errorArr) {
   const errString = errorArr.map((errObj) => `<p>${errObj.message}</p>`).join("");
   const divEl = document.createElement("div");
   divEl.innerHTML = errString;
-  formEl1.before(divEl);
+  formEl.before(divEl);
 }
